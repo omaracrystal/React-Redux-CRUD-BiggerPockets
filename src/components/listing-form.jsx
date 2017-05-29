@@ -91,7 +91,7 @@ class ListingForm extends Component {
                         <Button
                             primary type='submit'
                             disabled={pristine || submitting}>
-                            ADD
+                            {listing._id ? 'UPDATE' : 'ADD'}
                         </Button>
 
                     </Form>

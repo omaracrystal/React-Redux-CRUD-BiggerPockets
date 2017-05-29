@@ -12,27 +12,27 @@ class App extends Component {
 
             <Container>
 
-                {/*<div className="ui two item menu">*/}
+                <div className="ui two item menu">
 
-                    {/*<NavLink*/}
-                        {/*className="item"*/}
-                        {/*activeClassName="active"*/}
-                        {/*exact to="/">*/}
-                        {/*Listings*/}
-                    {/*</NavLink>*/}
+                    <NavLink
+                        className="item"
+                        activeClassName="active"
+                        exact to="/">
+                        Listings
+                    </NavLink>
 
-                    {/*<NavLink*/}
-                        {/*className="item"*/}
-                        {/*activeClassName="active"*/}
-                        {/*exact to="/listings/new">*/}
-                        {/*Add Listing*/}
-                    {/*</NavLink>*/}
+                    <NavLink
+                        className="item"
+                        activeClassName="active"
+                        exact to="/listings/new">
+                        Add Listing
+                    </NavLink>
 
-                {/*</div>*/}
+                </div>
 
                 <Route path="/listings/new" component={ListingFormPage}/>
                 <Route path="/listings/edit/:_id" component={ListingFormPage}/>
-                
+
                 <Route path="/" component={ListingListPage}/>
 
 
