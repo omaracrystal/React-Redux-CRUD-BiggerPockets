@@ -91,6 +91,11 @@ a {
 b, strong {
   font-weight: 600; }
 
+button {
+  background: none;
+  outline: 0;
+  border: 0; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-weight: 400; }
 
@@ -221,43 +226,45 @@ li {
   justify-content: space-between;
   max-width: 760px;
   margin: auto; }
-  .App-list-container .App-listing-item-wrapper {
-    position: relative;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-    width: 44%;
-    min-width: 300px;
-    background: #ffffff;
-    margin: 15px 0;
+
+.App-listing-item-wrapper {
+  position: relative;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+  width: 44%;
+  min-width: 300px;
+  background: #ffffff;
+  margin: 15px 0;
+  cursor: pointer;
+  height: 80px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px;
+  transition: all 0.3s ease; }
+  .App-listing-item-wrapper:hover, .App-listing-item-wrapper:focus, .App-listing-item-wrapper:active {
+    box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.21);
+    margin-top: 10px; }
+  .App-listing-item-wrapper .listing-item-name {
+    margin: 0; }
+  .App-listing-item-wrapper .fa {
+    color: #4A90E2;
     cursor: pointer;
-    height: 80px;
-    border-radius: 5px;
-    text-align: left;
-    padding: 15px;
+    font-size: 20px;
+    text-decoration: none !important;
     transition: all 0.3s ease; }
-    .App-list-container .App-listing-item-wrapper:hover, .App-list-container .App-listing-item-wrapper:focus, .App-list-container .App-listing-item-wrapper:active {
-      box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.21);
-      margin-top: 10px; }
-    .App-list-container .App-listing-item-wrapper .listing-item-name {
-      margin: 0; }
-    .App-list-container .App-listing-item-wrapper .fa {
-      position: absolute;
-      padding: 15px;
-      color: #4A90E2;
-      cursor: pointer;
-      font-size: 20px;
-      text-decoration: none !important;
-      transition: all 0.3s ease; }
-      .App-list-container .App-listing-item-wrapper .fa:hover, .App-list-container .App-listing-item-wrapper .fa:focus {
-        color: #1b5dab;
-        font-size: 23px; }
-      .App-list-container .App-listing-item-wrapper .fa:active, .App-list-container .App-listing-item-wrapper .fa:visited {
-        color: black; }
-      .App-list-container .App-listing-item-wrapper .fa.fa-pencil {
-        top: 0px;
-        right: 40px; }
-      .App-list-container .App-listing-item-wrapper .fa.fa-trash-o {
-        top: 0px;
-        right: 0px; }
+    .App-listing-item-wrapper .fa:hover, .App-listing-item-wrapper .fa:focus {
+      color: #1b5dab;
+      font-size: 23px; }
+    .App-listing-item-wrapper .fa:active, .App-listing-item-wrapper .fa:visited {
+      color: black; }
+  .App-listing-item-wrapper .font-awesome {
+    position: absolute;
+    padding: 15px; }
+    .App-listing-item-wrapper .font-awesome.edit-listing {
+      top: 0px;
+      right: 40px; }
+    .App-listing-item-wrapper .font-awesome.delete-listing {
+      top: 0px;
+      right: 0px; }
 
 /* -------------------------- CONTAINERS -------------------------- */
 .App {

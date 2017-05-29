@@ -10,7 +10,7 @@ import './index.css';
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
-      <App />
+      <App className="App"/>
     </Provider>
   </BrowserRouter>,
   document.getElementById('root')
