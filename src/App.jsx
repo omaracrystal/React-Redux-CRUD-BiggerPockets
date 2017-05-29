@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
 
-            <Container>
+            <Container className="App">
 
                 <div className="ui two item menu">
 

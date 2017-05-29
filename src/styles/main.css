@@ -57,7 +57,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #F1F1F1;
+  background-color: #F1F1F1 !important;
   font-family: "Open Sans", "Arial", "Helvetica", "sans-serif";
   /* 3 */
   /* 3 */
@@ -89,7 +89,7 @@ a {
     text-decoration: none; }
 
 b, strong {
-  font-weight: 600; }
+  font-weight: 600 !important; }
 
 button {
   background: none;
@@ -97,7 +97,7 @@ button {
   border: 0; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-weight: 400; }
+  font-weight: 400 !important; }
 
 h1,
 .h1 {
@@ -183,27 +183,32 @@ li {
 
 /* -------------------------- COMPONENTS -------------------------- */
 .App-form {
-  max-width: 760px;
+  max-width: 760px !important;
   margin: auto;
   display: flex;
   justify-content: space-between;
   margin: auto;
   padding-bottom: 50px; }
-  .App-form .form-input {
-    padding: 15px;
-    border: 0;
-    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.207843); }
-  .App-form .form-input-name {
-    border-radius: 5px 0 0 5px;
+  .App-form .field input {
+    padding: 15px !important;
+    border: 0 !important;
+    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.207843) !important; }
+  .App-form .field:first-child {
     width: 30%; }
-  .App-form .form-input-url {
-    border-radius: 0 5px 5px 0;
-    width: 70%; }
+    .App-form .field:first-child input {
+      border-radius: 5px 0 0 5px !important; }
+  .App-form .field:nth-child(2) {
+    width: 100%; }
+    .App-form .field:nth-child(2) input {
+      border-radius: 0 5px 5px 0 !important; }
   .App-form .form-button-save {
     border-radius: 5px;
     border: 0;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-    margin-left: 10px;
+    font-weight: 400 !important;
+    margin-left: 10px !important;
+    margin-top: 22px !important;
+    height: 48px;
     padding: 15px;
     width: 100px;
     background: #4A90E2;

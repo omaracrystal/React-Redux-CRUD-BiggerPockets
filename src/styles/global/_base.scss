@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: $site-background-color;
+  background-color: $site-background-color !important;
   font-family: $family-font;
   @include rem(font-size, $font-base);
   line-height: 1.5;

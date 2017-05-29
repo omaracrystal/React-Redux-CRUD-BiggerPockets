@@ -1,32 +1,46 @@
+//all !importants are overriding 'semantic-ui-react
+
 .App-form {
-  max-width: $mq-tablet;
+  max-width: $mq-tablet !important;
   margin: auto;
   display: flex;
   justify-content: space-between;
   margin: auto;
   padding-bottom: 50px;
 
-  .form-input {
-    padding: 15px;
-    border: 0;
-    box-shadow: $box-shadow-input-inset;
-  }
+  .field {
 
-  .form-input-name {
-    border-radius: $border-radius 0 0 $border-radius;
-    width: 30%;
-  }
+    input {
+      padding: 15px !important;
+      border: 0 !important;
+      box-shadow: $box-shadow-input-inset !important;
+    }
 
-  .form-input-url {
-    border-radius: 0 $border-radius $border-radius 0;
-    width: 70%;
+    &:first-child {
+      width: 30%;
+
+      input {
+        border-radius: $border-radius 0 0 $border-radius !important;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+
+      input {
+        border-radius: 0 $border-radius $border-radius 0 !important;
+      }
+    }
   }
 
   .form-button-save {
     border-radius: $border-radius;
     border: 0;
     box-shadow: $box-shadow-property-card;
-    margin-left: 10px;
+    font-weight: $font-weight-normal;
+    margin-left: 10px !important;
+    margin-top: 22px !important;
+    height: 48px;
     padding: 15px;
     width: 100px;
     background: #4A90E2;

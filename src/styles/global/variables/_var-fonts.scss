@@ -11,9 +11,9 @@ $font-awesome: FontAwesome;
 
 $family-font: $font_1, $font-2, $font-3, $sans-serif;
 
-$lighter: 300;
-$bold: 600;
-$font-weight-normal: 400;
+$lighter: 300 !important;
+$bold: 600 !important;
+$font-weight-normal: 400 !important;
 
 ////***------------------ font sizes ------------------**////
 $font-xsm: 10px; //~1rem

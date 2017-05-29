@@ -58,7 +58,7 @@ class ListingForm extends Component {
 
         return (
 
-            <Grid centered columns={2}>
+            <Grid centered>
                 <Grid.Column>
 
                     <h1 style={{marginTop: "1em"}}>
@@ -70,7 +70,7 @@ class ListingForm extends Component {
                         onSubmit={handleSubmit}
                         loading={loading}>
 
-                        <Form.Group widths='equal'>
+
 
                             <Field
                                 className="form-input form-input-name"
@@ -80,15 +80,16 @@ class ListingForm extends Component {
                                 label="Title"/>
 
                             <Field
-                                className="form-input form-input-name"
+                                className="form-input form-input-url"
                                 name="url"
                                 type="text"
                                 component={this.renderField}
                                 label="Url"/>
 
-                        </Form.Group>
+
 
                         <Button
+                            className="form-button-save"
                             primary type='submit'
                             disabled={pristine || submitting}>
                             {listing._id ? 'UPDATE' : 'ADD'}
