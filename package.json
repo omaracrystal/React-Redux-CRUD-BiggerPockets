@@ -6,8 +6,11 @@
     "axios": "^0.16.0",
     "classnames": "^2.2.5",
     "mddir": "^1.1.0",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.6.1",
     "react-redux": "^5.0.3",
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
@@ -19,9 +22,12 @@
     "semantic-ui-react": "^0.67.2"
   },
   "devDependencies": {
+    "node-sass-chokidar": "0.0.1",
     "react-scripts": "0.9.5"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
