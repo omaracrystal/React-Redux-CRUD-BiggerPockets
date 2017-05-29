@@ -1,15 +1,15 @@
-.App-list-container {
+.ui.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: $mq-tablet;
-  margin: auto;
+  margin: 0 auto !important;
 }
 
 .App-listing-item-wrapper {
   position: relative;
   box-shadow: $box-shadow-property-card;
-  width: 44%;
+  width: 48%;
   min-width: 300px;
   background: $property-card-background-color;
   margin: 15px 0;

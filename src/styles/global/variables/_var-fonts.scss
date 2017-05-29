@@ -3,13 +3,14 @@
 ////--------------------------------------------------------////
 
 ////***------------------ font styles ------------------**////
-$font_1: "Open Sans";
-$font_2: "Arial";
-$font_3: "Helvetica";
+$font_1: "Lato";
+$font_2: "Helvetica Neue";
+$font_3: "Arial";
+$font_4: "Helvetica";
 $sans-serif: "sans-serif";
 $font-awesome: FontAwesome;
 
-$family-font: $font_1, $font-2, $font-3, $sans-serif;
+$family-font: $font_1, $font-2, $font_3, $font_4 $sans-serif;
 
 $lighter: 300 !important;
 $bold: 600 !important;

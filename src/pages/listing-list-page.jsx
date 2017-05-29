@@ -11,11 +11,9 @@ class ListingListPage extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className="App-header">Listings</h1>
 
         <ListingList listings={this.props.listings} loading={this.props.loading} errors={this.props.errors} deleteListing={this.props.deleteListing}/>
-      </div>
+
     )
   }
 }

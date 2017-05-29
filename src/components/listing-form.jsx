@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Grid, Button} from 'semantic-ui-react';
+import {Form, Button} from 'semantic-ui-react';
 import {Field, reduxForm} from 'redux-form';
 import classnames from 'classnames';
 
@@ -58,11 +58,11 @@ class ListingForm extends Component {
 
         return (
 
-            <Grid centered>
-                <Grid.Column>
 
-                    <h1 style={{marginTop: "1em"}}>
-                        {listing._id ? 'Edit Listing' : 'Add New Listing'}
+                <div  className="form-container">
+
+                    <h1 className="form-header">
+                        Listings
                     </h1>
 
                     <Form
@@ -96,8 +96,8 @@ class ListingForm extends Component {
                         </Button>
 
                     </Form>
-                </Grid.Column>
-            </Grid>
+                </div>
+
         )
     }
 }

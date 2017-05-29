@@ -58,7 +58,7 @@ html {
 
 body {
   background-color: #F1F1F1 !important;
-  font-family: "Open Sans", "Arial", "Helvetica", "sans-serif";
+  font-family: "Lato", "Helvetica Neue", "Arial", "Helvetica" "sans-serif";
   /* 3 */
   /* 3 */
   /* 4 */
@@ -70,7 +70,7 @@ body {
   font-size: 1.4rem;
   /* 9 */
   line-height: 1.5;
-  color: #3c3939;
+  color: #3c3939 !important;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -187,7 +187,7 @@ li {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  margin: 50px auto;
   padding-bottom: 50px; }
   .App-form .field input {
     padding: 15px !important;
@@ -225,17 +225,17 @@ li {
       color: #ffffff;
       background: #185195; }
 
-.App-list-container {
+.ui.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 760px;
-  margin: auto; }
+  margin: 0 auto !important; }
 
 .App-listing-item-wrapper {
   position: relative;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-  width: 44%;
+  width: 48%;
   min-width: 300px;
   background: #ffffff;
   margin: 15px 0;
@@ -279,3 +279,7 @@ li {
 .App-header {
   padding-top: 30px;
   padding-bottom: 50px; }
+
+.form-container h1.form-header {
+  margin: 80px;
+  font-size: 48px; }
