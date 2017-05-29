@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
