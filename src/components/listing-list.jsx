@@ -19,9 +19,13 @@ export default function ListingList({listings, loading, errors, deleteListing}){
       <Message icon info>
         <Icon name='warning circle' />
         <Message.Content>
-           <Message.Header>No Listings Found</Message.Header>
+           <Message.Header>
+               No Listings Found
+           </Message.Header>
            <p>Add some new listings to get started.</p>
-           <Link to={'/listings/new'} className="ui button primary">Add New Listing</Link>
+           <Link to={'/listings/new'} className="ui button primary">
+               Add New Listing
+           </Link>
        </Message.Content>
       </Message>
     )

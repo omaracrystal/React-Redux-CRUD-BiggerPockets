@@ -62,7 +62,7 @@ class ListingForm extends Component {
                 <div  className="form-container">
 
                     <h1 className="form-header">
-                        Listings
+                        {listing._id ? 'Edit Listing' : 'Add Listing'}
                     </h1>
 
                     <Form

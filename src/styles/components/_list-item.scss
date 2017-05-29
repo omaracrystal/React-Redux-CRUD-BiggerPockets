@@ -1,20 +1,17 @@
 .ui.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   max-width: $mq-tablet;
   margin: 0 auto !important;
 }
 
 .App-listing-item-wrapper {
+  display: inline-block;
   position: relative;
   box-shadow: $box-shadow-property-card;
-  width: 48%;
-  min-width: 300px;
+  width: 350px;
   background: $property-card-background-color;
-  margin: 15px 0;
+  margin: 15px;
   cursor: pointer;
-  height: 80px;
+  height: 120px;
   border-radius: $border-radius;
   text-align: left;
   padding: 15px;
@@ -25,17 +22,21 @@
   &:active {
     box-shadow: $box-shadow-property-card-hover;
     margin-top: 10px;
+
+    .fa {
+      @include text-link($primary-btn-color, 20px);
+    }
   }
 
   .listing-item-name {
-    margin: 0;
+    margin: 10px 10px 20px 10px;
   }
   .listing-item-url {
-
+    margin: 0 10px;
   }
 
   .fa {
-    @include text-link($primary-btn-color, 20px);
+    color: $white;
   }
 
   .font-awesome {

@@ -187,7 +187,6 @@ li {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin: 50px auto;
   padding-bottom: 50px; }
   .App-form .field input {
     padding: 15px !important;
@@ -226,21 +225,18 @@ li {
       background: #185195; }
 
 .ui.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   max-width: 760px;
   margin: 0 auto !important; }
 
 .App-listing-item-wrapper {
+  display: inline-block;
   position: relative;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-  width: 48%;
-  min-width: 300px;
+  width: 350px;
   background: #ffffff;
-  margin: 15px 0;
+  margin: 15px;
   cursor: pointer;
-  height: 80px;
+  height: 120px;
   border-radius: 5px;
   text-align: left;
   padding: 15px;
@@ -248,19 +244,23 @@ li {
   .App-listing-item-wrapper:hover, .App-listing-item-wrapper:focus, .App-listing-item-wrapper:active {
     box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.21);
     margin-top: 10px; }
+    .App-listing-item-wrapper:hover .fa, .App-listing-item-wrapper:focus .fa, .App-listing-item-wrapper:active .fa {
+      color: #4A90E2;
+      cursor: pointer;
+      font-size: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease; }
+      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus, .App-listing-item-wrapper:active .fa:hover, .App-listing-item-wrapper:active .fa:focus {
+        color: #1b5dab;
+        font-size: 23px; }
+      .App-listing-item-wrapper:hover .fa:active, .App-listing-item-wrapper:hover .fa:visited, .App-listing-item-wrapper:focus .fa:active, .App-listing-item-wrapper:focus .fa:visited, .App-listing-item-wrapper:active .fa:active, .App-listing-item-wrapper:active .fa:visited {
+        color: black; }
   .App-listing-item-wrapper .listing-item-name {
-    margin: 0; }
+    margin: 10px 10px 20px 10px; }
+  .App-listing-item-wrapper .listing-item-url {
+    margin: 0 10px; }
   .App-listing-item-wrapper .fa {
-    color: #4A90E2;
-    cursor: pointer;
-    font-size: 20px;
-    text-decoration: none !important;
-    transition: all 0.3s ease; }
-    .App-listing-item-wrapper .fa:hover, .App-listing-item-wrapper .fa:focus {
-      color: #1b5dab;
-      font-size: 23px; }
-    .App-listing-item-wrapper .fa:active, .App-listing-item-wrapper .fa:visited {
-      color: black; }
+    color: #ffffff; }
   .App-listing-item-wrapper .font-awesome {
     position: absolute;
     padding: 15px; }
@@ -281,5 +281,5 @@ li {
   padding-bottom: 50px; }
 
 .form-container h1.form-header {
-  margin: 80px;
+  margin: 50px;
   font-size: 48px; }
