@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/* -------------------------- NORMALIZE -------------------------- */
+@import url(../../node_modules/normalize.css);
+/* ---------------------------- GLOBAL ---------------------------- */
+/*
+MIXIN DETAILS = http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+
+* Accepts either px or rem as an input value
+* Accepts (almost) any property as an input, not only font-size
+* Accepts multiple values, like 10px 20px (for padding or margin as an example)
+
+* The mixin relies on a baseline of 10px
+* The mixin relies on a function to parse the integer from a value with a unit
+* We define a list of values for both units
+* We iterate through each value in the given parameter $values
+* If the value is either auto or 0, we append it to the list as-is
+* If the value has a unit, we split it to get both the unit and the raw value
+* We append according values to the lists depending on the unit of the given value
+* If the two lists are the same, we ouput only one (like margin-top: 0)
+* We output the result
+
+There are still some issues with this mixin:
+
+* Doesn’t work with all properties (border shorthand among others)
+* Doesn’t fallback if you input a wrong value (wrong unit or unitless value as an example)
+* Relies on a defined baseline; however this is easily fixed by adding a $baseline parameter to the mixin
+* Relies on a parseInt() function; I’ve proposed it to Compass, let’s hope they add it anytime soon
+* Doesn't recognize !important
+* Deosn't work with percentages %
+
+/*
+
+** - EXAMPLE: - **
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include rem(font-size, 1.6rem);
+  @include rem(padding, 20px 10px);
+}
+… outputs:
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;  // Fallback for IE8
+  font-size: 1.6rem;
+  padding: 20px 10px; // Fallback for IE8
+  padding: 2rem 1rem;
+}
+
+*/
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #F1F1F1;
+  font-family: "Open Sans", "Arial", "Helvetica", "sans-serif";
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 14px;
+  /* 9 */
+  font-size: 1.4rem;
+  /* 9 */
+  line-height: 1.5;
+  color: #3c3939;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  a:hover, a:focus, a:active, a:visited {
+    text-decoration: none; }
+
+b, strong {
+  font-weight: 600; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-weight: 400; }
+
+h1,
+.h1 {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 48px;
+  /* 9 */
+  font-size: 4.8rem;
+  /* 9 */ }
+
+h2,
+.h2 {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 36px;
+  /* 9 */
+  font-size: 3.6rem;
+  /* 9 */ }
+
+h3,
+.h3 {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 24px;
+  /* 9 */
+  font-size: 2.4rem;
+  /* 9 */ }
+
+h4,
+.h4 {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 18px;
+  /* 9 */
+  font-size: 1.8rem;
+  /* 9 */ }
+
+h5,
+.h5 {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 16px;
+  /* 9 */
+  font-size: 1.6rem;
+  /* 9 */ }
+
+input {
+  cursor: pointer !important;
+  border-radius: 5px; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.hide {
+  display: none !important;
+  visibility: hidden; }
+
+/* -------------------------- COMPONENTS -------------------------- */
+.App-form {
+  max-width: 760px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 50px; }
+  .App-form .form-input {
+    padding: 15px;
+    border: 0;
+    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.207843); }
+  .App-form .form-input-name {
+    border-radius: 5px 0 0 5px;
+    width: 30%; }
+  .App-form .form-input-url {
+    border-radius: 0 5px 5px 0;
+    width: 70%; }
+  .App-form .form-button-save {
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+    margin-left: 10px;
+    padding: 15px;
+    width: 100px;
+    background: #4A90E2;
+    color: #ffffff;
+    background: #4A90E2;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: all 0.3s ease; }
+    .App-form .form-button-save:hover, .App-form .form-button-save:focus {
+      color: #ffffff;
+      background: #2171ce; }
+    .App-form .form-button-save:active {
+      color: #ffffff;
+      background: #185195; }
+
+.App-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: auto; }
+  .App-list-container .App-listing-item-wrapper {
+    position: relative;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+    width: 44%;
+    min-width: 300px;
+    background: #ffffff;
+    margin: 15px 0;
+    cursor: pointer;
+    height: 80px;
+    border-radius: 5px;
+    text-align: left;
+    padding: 15px;
+    transition: all 0.3s ease; }
+    .App-list-container .App-listing-item-wrapper:hover, .App-list-container .App-listing-item-wrapper:focus, .App-list-container .App-listing-item-wrapper:active {
+      box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.21);
+      margin-top: 10px; }
+    .App-list-container .App-listing-item-wrapper .listing-item-name {
+      margin: 0; }
+    .App-list-container .App-listing-item-wrapper .fa {
+      position: absolute;
+      padding: 15px;
+      color: #4A90E2;
+      cursor: pointer;
+      font-size: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease; }
+      .App-list-container .App-listing-item-wrapper .fa:hover, .App-list-container .App-listing-item-wrapper .fa:focus {
+        color: #1b5dab;
+        font-size: 23px; }
+      .App-list-container .App-listing-item-wrapper .fa:active, .App-list-container .App-listing-item-wrapper .fa:visited {
+        color: black; }
+      .App-list-container .App-listing-item-wrapper .fa.fa-pencil {
+        top: 0px;
+        right: 40px; }
+      .App-list-container .App-listing-item-wrapper .fa.fa-trash-o {
+        top: 0px;
+        right: 0px; }
+
+/* -------------------------- CONTAINERS -------------------------- */
+.App {
+  text-align: center;
+  padding: 20px; }
+
+.App-header {
+  padding-top: 30px;
+  padding-bottom: 50px; }

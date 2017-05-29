@@ -1,0 +1,36 @@
+.App-form {
+  max-width: $mq-tablet;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 50px;
+
+  .form-input {
+    padding: 15px;
+    border: 0;
+    box-shadow: $box-shadow-input-inset;
+  }
+
+  .form-input-name {
+    border-radius: $border-radius 0 0 $border-radius;
+    width: 30%;
+  }
+
+  .form-input-url {
+    border-radius: 0 $border-radius $border-radius 0;
+    width: 70%;
+  }
+
+  .form-button-save {
+    border-radius: $border-radius;
+    border: 0;
+    box-shadow: $box-shadow-property-card;
+    margin-left: 10px;
+    padding: 15px;
+    width: 100px;
+    background: #4A90E2;
+    color: #ffffff;
+    @include button($primary-btn-color, $white)
+  }
+}

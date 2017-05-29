@@ -1,0 +1,84 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $site-background-color;
+  font-family: $family-font;
+  @include rem(font-size, $font-base);
+  line-height: 1.5;
+  color: $primary-text-color;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+b, strong {
+  font-weight: $bold;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-weight: $font-weight-normal;
+}
+
+h1,
+.h1 {
+  @include rem(font-size, $font-h1);
+}
+
+h2,
+.h2 {
+  @include rem(font-size, $font-h2);
+}
+
+h3,
+.h3 {
+  @include rem(font-size, $font-h3);
+}
+
+h4,
+.h4 {
+  @include rem(font-size, $font-h4);
+}
+
+h5,
+.h5 {
+  @include rem(font-size, $font-h5);
+}
+
+input {
+  cursor: pointer !important;
+  border-radius: $border-radius;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+

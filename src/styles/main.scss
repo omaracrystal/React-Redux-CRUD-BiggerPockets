@@ -1,0 +1,33 @@
+/* -------------------------- NORMALIZE -------------------------- */
+
+@import "../../node_modules/normalize.css";
+
+/* ---------------------------- GLOBAL ---------------------------- */
+
+@import "global/variables/var-colors";
+
+@import "global/variables/var-fonts";
+
+@import "global/variables/var-media-queries";
+
+@import "global/variables/var-other";
+
+@import "global/mixins/mixins-buttons";
+
+@import "global/mixins/mixins-px-to-rem";
+
+@import "global/base";
+
+@import "global/helpers";
+
+/* -------------------------- COMPONENTS -------------------------- */
+
+@import "components/buttons";
+
+@import "components/forms";
+
+@import "components/list-item";
+
+/* -------------------------- CONTAINERS -------------------------- */
+
+@import "containers/app";

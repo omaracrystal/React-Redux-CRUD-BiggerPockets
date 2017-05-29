@@ -1,0 +1,39 @@
+////***------------------ Button & Link Mixins ------------------**/////
+
+@mixin button($bg, $text-hover) {
+  background: $bg;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: $transition-hover;
+
+  &:hover,
+  &:focus {
+    color: $text-hover;
+    background: darken($bg, 12%);
+  }
+
+  &:active {
+    color: $text-hover;
+    background: darken($bg, 25%);
+  }
+}
+
+@mixin text-link($color, $font-size) {
+  color: $color;
+  cursor: pointer;
+  font-size: $font-size;
+  text-decoration: none !important;
+  transition: $transition-hover;
+
+  &:hover,
+  &:focus {
+    color: darken($color, 20%);
+    font-size: $font-size+3px;
+  }
+
+  &:active,
+  &:visited {
+    color: darken($color, 60%);
+  }
+}

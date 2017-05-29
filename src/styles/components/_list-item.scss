@@ -1,0 +1,51 @@
+.App-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: $mq-tablet;
+  margin: auto;
+
+  .App-listing-item-wrapper {
+    position: relative;
+    box-shadow: $box-shadow-property-card;
+    width: 44%;
+    min-width: 300px;
+    background: $property-card-background-color;
+    margin: 15px 0;
+    cursor: pointer;
+    height: 80px;
+    border-radius: $border-radius;
+    text-align: left;
+    padding: 15px;
+    transition: $transition-hover;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: $box-shadow-property-card-hover;
+      margin-top: 10px;
+    }
+
+    .listing-item-name {
+      margin: 0;
+    }
+    .listing-item-url {
+
+    }
+    .fa {
+      position: absolute;
+      padding: 15px;
+      @include text-link($primary-btn-color, 20px);
+
+      &.fa-pencil {
+        top: 0px;
+        right: 40px;
+      }
+
+      &.fa-trash-o {
+        top: 0px;
+        right: 0px;
+      }
+    }
+  }
+}
