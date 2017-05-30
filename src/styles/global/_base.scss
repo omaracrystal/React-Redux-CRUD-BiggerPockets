@@ -3,11 +3,13 @@ html {
 }
 
 body {
-  background-color: $site-background-color !important;
-  font-family: $family-font;
+  background-color: $site-background-color;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  //font-family: $family-font;
   @include rem(font-size, $font-base);
   line-height: 1.5;
-  color: $primary-text-color !important;
+  color: $primary-text-color;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -19,16 +21,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-  &:hover,
-  &:focus,
-  &:active,
-  &:visited {
-    text-decoration: none;
+a {
+  @include text-link($primary-btn-color, $font-base);
+
+  * {
+    @include text-link($primary-btn-color, $font-base);
   }
 }
 

@@ -1,7 +1,3 @@
-.ui.cards {
-  max-width: $mq-tablet;
-  margin: 0 auto !important;
-}
 
 .App-listing-item-wrapper {
   display: inline-block;
@@ -11,30 +7,31 @@
   background: $property-card-background-color;
   margin: 15px;
   cursor: pointer;
-  height: 135px;
+  height: 125px;
   border-radius: $border-radius;
   text-align: left;
   padding: 15px;
   transition: $transition-hover;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     box-shadow: $box-shadow-property-card-hover;
     margin-top: 10px;
 
     .fa {
       visibility: visible;
       @include text-link($primary-btn-color, 20px);
+      @include font-awesome-close-up(20px);
     }
   }
 
   .listing-item-name {
-    margin: 22px 10px 22px 10px;
+    margin: 15px 10px 10px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .listing-item-url {
     margin: 0 10px;
     overflow: hidden;

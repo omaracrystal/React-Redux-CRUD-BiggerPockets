@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* -------------------------- NORMALIZE -------------------------- */
 @import url(../../node_modules/normalize.css);
+/* -------------------------- OUTSIDE STYLESHEETS -------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin");
 /* ---------------------------- GLOBAL ---------------------------- */
 /*
 MIXIN DETAILS = http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
@@ -57,20 +59,21 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #F1F1F1 !important;
-  font-family: "Lato", "Helvetica Neue", "Arial", "Helvetica" "sans-serif";
+  background-color: #F1F1F1;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   /* 3 */
   /* 3 */
   /* 4 */
   /* 6 */
   /* 6 */
   /* 7 */
-  font-size: 14px;
+  font-size: 16px;
   /* 9 */
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   /* 9 */
   line-height: 1.5;
-  color: #3c3939 !important;
+  color: #3c3939;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -81,12 +84,29 @@ body {
   -o-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 a {
-  text-decoration: none;
+  color: #4A90E2;
   cursor: pointer;
+  font-size: 16px;
+  text-decoration: none !important;
   transition: all 0.3s ease; }
-  a:hover, a:focus, a:active, a:visited {
-    text-decoration: none; }
+  a:hover, a:focus {
+    color: #1b5dab; }
+  a:active, a:visited {
+    color: black; }
+  a * {
+    color: #4A90E2;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none !important;
+    transition: all 0.3s ease; }
+    a *:hover, a *:focus {
+      color: #1b5dab; }
+    a *:active, a *:visited {
+      color: black; }
 
 b, strong {
   font-weight: 600 !important; }
@@ -133,9 +153,9 @@ h3,
   /* 6 */
   /* 6 */
   /* 7 */
-  font-size: 24px;
+  font-size: 22px;
   /* 9 */
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   /* 9 */ }
 
 h4,
@@ -146,9 +166,9 @@ h4,
   /* 6 */
   /* 6 */
   /* 7 */
-  font-size: 18px;
+  font-size: 22px;
   /* 9 */
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   /* 9 */ }
 
 h5,
@@ -159,9 +179,9 @@ h5,
   /* 6 */
   /* 6 */
   /* 7 */
-  font-size: 16px;
+  font-size: 18px;
   /* 9 */
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   /* 9 */ }
 
 input {
@@ -182,34 +202,69 @@ li {
   visibility: hidden; }
 
 /* -------------------------- COMPONENTS -------------------------- */
+.ui.two.item.menu {
+  display: flex;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+  margin: 0 -15px 30px; }
+  .ui.two.item.menu .item {
+    color: #3c3939;
+    width: 50%;
+    padding: 15px;
+    background: #F1F1F1;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: all 0.3s ease; }
+    .ui.two.item.menu .item:hover, .ui.two.item.menu .item:focus {
+      color: #000000;
+      background: #d2d2d2; }
+    .ui.two.item.menu .item:active {
+      color: #000000;
+      background: #b1b1b1; }
+    .ui.two.item.menu .item.active {
+      background: #ffffff;
+      border: 0;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: all 0.3s ease; }
+      .ui.two.item.menu .item.active:hover, .ui.two.item.menu .item.active:focus {
+        color: #000000;
+        background: #e0e0e0; }
+      .ui.two.item.menu .item.active:active {
+        color: #000000;
+        background: #bfbfbf; }
+    .ui.two.item.menu .item:first-child {
+      border-right: 1px solid #d3d3d3; }
+
 .App-form {
-  max-width: 730px !important;
+  max-width: 730px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px; }
   .App-form .field label {
+    position: absolute;
     visibility: hidden; }
   .App-form .field input {
-    padding: 15px !important;
-    border: 0 !important;
-    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.207843) !important; }
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.207843); }
   .App-form .field:first-child {
     width: 35%; }
     .App-form .field:first-child input {
-      border-radius: 5px 0 0 5px !important; }
+      border-radius: 5px 0 0 5px; }
   .App-form .field:nth-child(2) {
     width: 70%; }
     .App-form .field:nth-child(2) input {
-      border-radius: 0 5px 5px 0 !important; }
+      border-radius: 0 5px 5px 0; }
   .App-form .form-button-save {
     border-radius: 5px;
     border: 0;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
     font-weight: 400 !important;
-    margin-left: 10px !important;
-    margin-top: 22px !important;
-    height: 48px;
+    margin-left: 10px;
+    height: 45px;
     padding: 15px;
     width: 100px;
     background: #4A90E2;
@@ -225,6 +280,8 @@ li {
     .App-form .form-button-save:active {
       color: #ffffff;
       background: #185195; }
+    .App-form .form-button-save.disabled {
+      cursor: not-allowed; }
   @media (max-width: 460px) {
     .App-form {
       padding-bottom: 0;
@@ -234,23 +291,23 @@ li {
       .App-form .field {
         display: flex;
         align-items: center;
-        margin: 0 !important;
+        margin: 0;
         position: relative; }
         .App-form .field label {
           position: absolute;
           width: 6ch;
           visibility: visible;
-          color: #3c3939 !important;
+          color: #3c3939;
           text-align: left;
-          margin: 0 !important;
-          padding: 0 0 0 10px !important; }
+          margin: 0;
+          padding: 0 0 0 10px; }
         .App-form .field input {
-          padding: 15px 15px 15px 44px !important;
-          border-radius: 5px !important; }
+          padding: 15px 15px 15px 44px;
+          border-radius: 5px; }
         .App-form .field.error input {
-          padding-top: 25px !important; }
+          padding-top: 25px; }
         .App-form .field.error label {
-          padding-top: 10px !important; }
+          padding-top: 10px; }
         .App-form .field .error {
           display: inline-block;
           position: absolute;
@@ -260,19 +317,15 @@ li {
         .App-form .field:first-child {
           width: 100%; }
           .App-form .field:first-child input {
-            border-radius: 5px 5px 0 0 !important; }
+            border-radius: 5px 5px 0 0; }
         .App-form .field:nth-child(2) {
           width: 100%; }
           .App-form .field:nth-child(2) input {
-            border-radius: 0 0 5px 5px !important; }
+            border-radius: 0 0 5px 5px; }
       .App-form .form-button-save {
-        margin: 0 !important;
+        margin: 0;
         width: 100%;
-        border-radius: 0 0 5px 5px !important; } }
-
-.ui.cards {
-  max-width: 760px;
-  margin: 0 auto !important; }
+        border-radius: 0 0 5px 5px; } }
 
 .App-listing-item-wrapper {
   display: inline-block;
@@ -282,28 +335,29 @@ li {
   background: #ffffff;
   margin: 15px;
   cursor: pointer;
-  height: 135px;
+  height: 125px;
   border-radius: 5px;
   text-align: left;
   padding: 15px;
   transition: all 0.3s ease; }
-  .App-listing-item-wrapper:hover, .App-listing-item-wrapper:focus, .App-listing-item-wrapper:active {
+  .App-listing-item-wrapper:hover, .App-listing-item-wrapper:focus {
     box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.21);
     margin-top: 10px; }
-    .App-listing-item-wrapper:hover .fa, .App-listing-item-wrapper:focus .fa, .App-listing-item-wrapper:active .fa {
+    .App-listing-item-wrapper:hover .fa, .App-listing-item-wrapper:focus .fa {
       visibility: visible;
       color: #4A90E2;
       cursor: pointer;
       font-size: 20px;
       text-decoration: none !important;
       transition: all 0.3s ease; }
-      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus, .App-listing-item-wrapper:active .fa:hover, .App-listing-item-wrapper:active .fa:focus {
-        color: #1b5dab;
-        font-size: 23px; }
-      .App-listing-item-wrapper:hover .fa:active, .App-listing-item-wrapper:hover .fa:visited, .App-listing-item-wrapper:focus .fa:active, .App-listing-item-wrapper:focus .fa:visited, .App-listing-item-wrapper:active .fa:active, .App-listing-item-wrapper:active .fa:visited {
+      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus {
+        color: #1b5dab; }
+      .App-listing-item-wrapper:hover .fa:active, .App-listing-item-wrapper:hover .fa:visited, .App-listing-item-wrapper:focus .fa:active, .App-listing-item-wrapper:focus .fa:visited {
         color: black; }
+      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus {
+        font-size: 23px; }
   .App-listing-item-wrapper .listing-item-name {
-    margin: 22px 10px 22px 10px;
+    margin: 15px 10px 10px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
@@ -331,11 +385,17 @@ li {
 
 /* -------------------------- CONTAINERS -------------------------- */
 .App {
-  text-align: center; }
+  text-align: center;
+  padding: 0 15px 30px; }
 
 .App-header {
   padding-top: 30px;
   padding-bottom: 50px; }
+
+.ui.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .form-container h1.form-header {
   margin: 50px;
@@ -344,6 +404,3 @@ li {
     .form-container h1.form-header {
       margin: 30px 0 20px;
       font-size: 25px; } }
-
-.ui.container {
-  width: 100% !important; }

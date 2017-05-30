@@ -1,10 +1,17 @@
 .App {
   text-align: center;
+  padding: 0 15px 30px;
 }
 
 .App-header {
   padding-top: 30px;
   padding-bottom: 50px;
+}
+
+.ui.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .form-container {
@@ -18,8 +25,4 @@
       font-size: 25px;
     }
   }
-}
-
-.ui.container {
-  width: 100% !important;
 }

@@ -2,6 +2,10 @@
 
 @import "../../node_modules/normalize.css";
 
+/* -------------------------- OUTSIDE STYLESHEETS -------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+
 /* ---------------------------- GLOBAL ---------------------------- */
 
 @import "global/variables/var-colors";
@@ -22,7 +26,7 @@
 
 /* -------------------------- COMPONENTS -------------------------- */
 
-@import "components/buttons";
+@import "components/navigation";
 
 @import "components/forms";
 
