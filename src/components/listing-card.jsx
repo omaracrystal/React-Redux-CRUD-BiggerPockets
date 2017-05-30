@@ -6,6 +6,7 @@ import '../styles/main.css';
 import 'normalize.css';
 
 export default function ListingCard({listing, deleteListing}) {
+
   return (
     <li className="App-listing-item-wrapper">
 

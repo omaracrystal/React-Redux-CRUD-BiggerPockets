@@ -32,9 +32,7 @@ class App extends Component {
 
                 <Route path="/listings/new" component={ListingFormPage}/>
                 <Route path="/listings/edit/:_id" component={ListingFormPage}/>
-
                 <Route path="/" component={ListingListPage}/>
-
 
 
             </Container>

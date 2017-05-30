@@ -41,6 +41,13 @@
   .fa {
     color: $white;
     visibility: hidden;
+
+    //show buttons when device is most likely to be touchscreen
+    @media (max-width: $mq-tablet) {
+      font-size: $font-lg;
+      color: $primary-btn-color;
+      visibility: visible;
+    }
   }
 
   .font-awesome {

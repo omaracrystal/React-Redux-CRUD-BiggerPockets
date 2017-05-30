@@ -586,6 +586,11 @@ li {
   .App-listing-item-wrapper .fa {
     color: #ffffff;
     visibility: hidden; }
+    @media (max-width: 760px) {
+      .App-listing-item-wrapper .fa {
+        font-size: 22px;
+        color: #4A90E2;
+        visibility: visible; } }
   .App-listing-item-wrapper .font-awesome {
     position: absolute;
     /* 3 */

@@ -13,6 +13,9 @@ class ListingFormPage extends Component {
   }
 
   componentDidMount = () => {
+
+    window.scrollTo(0,0);
+
     const { _id } = this.props.match.params;
     if(_id){
       this.props.fetchListing(_id)
