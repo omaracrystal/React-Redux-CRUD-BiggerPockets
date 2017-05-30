@@ -1,12 +1,16 @@
 //all !importants are overriding 'semantic-ui-react'
 .App-form {
-  max-width: $mq-tablet !important;
+  max-width: 730px !important;
   margin: auto;
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
 
   .field {
+
+    label {
+      visibility: hidden;
+    }
 
     input {
       padding: 15px !important;
@@ -15,7 +19,7 @@
     }
 
     &:first-child {
-      width: 30%;
+      width: 35%;
 
       input {
         border-radius: $border-radius 0 0 $border-radius !important;
@@ -23,7 +27,7 @@
     }
 
     &:nth-child(2) {
-      width: 100%;
+      width: 70%;
 
       input {
         border-radius: 0 $border-radius $border-radius 0 !important;
@@ -44,5 +48,74 @@
     background: #4A90E2;
     color: #ffffff;
     @include button($primary-btn-color, $white)
+  }
+
+  @media (max-width: $mq-mobile) {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      margin: 0 !important;
+      position: relative;
+
+      label {
+        position: absolute;
+        width: 6ch;
+        visibility: visible;
+        color: $primary-text-color !important;
+        text-align: left;
+        margin: 0 !important;
+        padding: 0 0 0 10px!important;
+      }
+
+      input {
+        padding: 15px 15px 15px 44px !important;
+        border-radius: $border-radius !important;
+      }
+
+      &.error {
+
+        input {
+          padding-top: 25px !important;
+        }
+
+        label {
+          padding-top: 10px !important;
+        }
+      }
+
+      .error {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      &:first-child {
+        width: 100%;
+
+        input {
+          border-radius: $border-radius $border-radius 0 0 !important;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+
+        input {
+          border-radius: 0 0 $border-radius $border-radius !important;
+        }
+      }
+    }
+    .form-button-save {
+      margin: 0!important;
+      width: 100%;
+      border-radius: 0 0 $border-radius $border-radius !important;
+    }
   }
 }

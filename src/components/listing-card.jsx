@@ -13,9 +13,10 @@ export default function ListingCard({listing, deleteListing}) {
            {listing.title}
         </h3>
 
-        <p className="listing-item-url">
-          {listing.url}
-        </p>
+        <a href={`${listing.url}`} target="_blank">
+            <p className="listing-item-url">
+            {listing.url}
+        </p></a>
 
         <Link className="font-awesome edit-listing"
               to={`/listings/edit/${listing._id}`}>

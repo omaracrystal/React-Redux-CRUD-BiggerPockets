@@ -17,7 +17,7 @@ const validate = (values) => {
             message: 'Please provide a valid url'
         }
     }
-    // else if(!/^[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/.test(values.url)) {
+    // else if(!/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/i.test(values.url)) {
     //   errors.url = {
     //     message: 'Invalid Url'
     //   }

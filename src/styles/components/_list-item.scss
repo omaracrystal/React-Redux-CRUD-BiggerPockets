@@ -11,7 +11,7 @@
   background: $property-card-background-color;
   margin: 15px;
   cursor: pointer;
-  height: 120px;
+  height: 135px;
   border-radius: $border-radius;
   text-align: left;
   padding: 15px;
@@ -24,19 +24,27 @@
     margin-top: 10px;
 
     .fa {
+      visibility: visible;
       @include text-link($primary-btn-color, 20px);
     }
   }
 
   .listing-item-name {
-    margin: 10px 10px 20px 10px;
+    margin: 22px 10px 22px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .listing-item-url {
     margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .fa {
     color: $white;
+    visibility: hidden;
   }
 
   .font-awesome {
@@ -52,5 +60,10 @@
       top: 0px;
       right: 0px;
     }
+  }
+
+  @media (max-width: $mq-tablet) {
+    width: 100%;
+    margin: 15px 0;
   }
 }
