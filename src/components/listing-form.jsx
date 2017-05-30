@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Form, Button} from 'semantic-ui-react';
 import {Field, reduxForm} from 'redux-form';
 import classnames from 'classnames';
+import {NavLink} from 'react-router-dom';
 
 const validate = (values) => {
 
@@ -86,7 +87,12 @@ class ListingForm extends Component {
                                 component={this.renderField}
                                 label="Url"/>
 
-
+                        <NavLink
+                            className={listing._id ? 'cancel-edit' : 'hide'}
+                            activeClassName="active"
+                            exact to="/listings/new">
+                            {listing._id ? 'cancel' : ''}
+                        </NavLink>
 
                         <Button
                             className="form-button-save"

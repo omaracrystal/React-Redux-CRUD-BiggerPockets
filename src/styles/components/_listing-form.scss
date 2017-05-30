@@ -1,9 +1,19 @@
 .App-form {
+  position: relative;
   max-width: $mq-tablet;
   margin: auto;
   display: flex;
   justify-content: space-between;
   @include rem(padding-bottom, 50px);
+
+  .cancel-edit {
+    position: absolute;
+    z-index: 10;
+    @include rem(right, 104px);
+    color: $error-color;
+    @include rem(padding, 12px 25px);
+    border-left: 1px solid;
+  }
 
   .field {
 

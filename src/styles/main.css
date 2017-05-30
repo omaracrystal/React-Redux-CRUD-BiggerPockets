@@ -310,6 +310,7 @@ li {
       border-right: 1px solid #d3d3d3; }
 
 .App-form {
+  position: relative;
   max-width: 760px;
   margin: auto;
   display: flex;
@@ -324,6 +325,35 @@ li {
   /* 9 */
   padding-bottom: 5rem;
   /* 9 */ }
+  .App-form .cancel-edit {
+    position: absolute;
+    z-index: 10;
+    /* 3 */
+    /* 3 */
+    /* 4 */
+    /* 6 */
+    /* 6 */
+    /* 7 */
+    right: 104px;
+    /* 9 */
+    right: 10.4rem;
+    /* 9 */
+    color: #9f3a38;
+    /* 3 */
+    /* 3 */
+    /* 4 */
+    /* 6 */
+    /* 6 */
+    /* 7 */
+    /* 4 */
+    /* 6 */
+    /* 6 */
+    /* 7 */
+    padding: 12px 25px;
+    /* 9 */
+    padding: 1.2rem 2.5rem;
+    /* 9 */
+    border-left: 1px solid; }
   .App-form .field label {
     position: absolute;
     visibility: hidden; }
