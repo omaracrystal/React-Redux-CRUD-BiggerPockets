@@ -1,10 +1,9 @@
-//all s are overriding 'semantic-ui-react'
 .App-form {
-  max-width: 730px ;
+  max-width: $mq-tablet;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 50px;
+  @include rem(padding-bottom, 50px);
 
   .field {
 
@@ -15,16 +14,20 @@
 
     input {
       width: 100%;
-      padding: 15px ;
-      border: 0 ;
-      box-shadow: $box-shadow-input-inset ;
+      @include rem(padding, 15px);
+      border: 0;
+      box-shadow: $box-shadow-input-inset;
+    }
+
+    .error {
+      @include rem(font-size, $font-sm);
     }
 
     &:first-child {
       width: 35%;
 
       input {
-        border-radius: $border-radius 0 0 $border-radius ;
+        border-radius: $border-radius 0 0 $border-radius;
       }
     }
 
@@ -32,7 +35,7 @@
       width: 70%;
 
       input {
-        border-radius: 0 $border-radius $border-radius 0 ;
+        border-radius: 0 $border-radius $border-radius 0;
       }
     }
   }
@@ -42,9 +45,9 @@
     border: 0;
     box-shadow: $box-shadow-property-card;
     font-weight: $font-weight-normal;
-    margin-left: 10px ;
-    height: 45px;
-    padding: 15px;
+    @include rem(margin-left, 10px);
+    @include rem(height, 45px);
+    @include rem(padding, 15px);
     width: 100px;
     background: #4A90E2;
     color: #ffffff;
@@ -59,37 +62,40 @@
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    @include rem(margin-bottom, 20px);
 
     .field {
       display: flex;
       align-items: center;
-      margin: 0 ;
+      margin: 0;
       position: relative;
 
       label {
-        position: absolute;
         width: 6ch;
         visibility: visible;
-        color: $primary-text-color ;
+        color: $text-light-gray;
         text-align: left;
-        margin: 0 ;
-        padding: 0 0 0 10px;
+        margin: 0;
+        @include rem(padding, 0 0 0 10px);
       }
 
       input {
-        padding: 15px 15px 15px 44px ;
-        border-radius: $border-radius ;
+        @include rem(padding-left, 55px);
+        border-radius: $border-radius;
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          color: $white;
+        }
       }
 
       &.error {
 
         input {
-          padding-top: 25px ;
+          @include rem(padding-top, 25px);
         }
 
         label {
-          padding-top: 10px ;
+          @include rem(padding-top, 10px);
         }
       }
 
@@ -105,7 +111,7 @@
         width: 100%;
 
         input {
-          border-radius: $border-radius $border-radius 0 0 ;
+          border-radius: $border-radius $border-radius 0 0;
         }
       }
 
@@ -113,14 +119,16 @@
         width: 100%;
 
         input {
-          border-radius: 0 0 $border-radius $border-radius ;
+          border-radius: 0;
+          border-bottom: 1px solid $border-gray;
+          @include rem(margin-bottom, 1px);
         }
       }
     }
     .form-button-save {
       margin: 0;
       width: 100%;
-      border-radius: 0 0 $border-radius $border-radius ;
+      border-radius: 0 0 $border-radius $border-radius;
     }
   }
 }

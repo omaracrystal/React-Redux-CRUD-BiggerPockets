@@ -9,7 +9,7 @@ const validate = (values) => {
 
     if (!values.title) {
         errors.title = {
-            message: 'Please provide a title for your listing url'
+            message: 'Please provide a title for url'
         }
     }
     if (!values.url) {
@@ -46,7 +46,7 @@ class ListingForm extends Component {
 
             {touched && error &&
                 <span className="error">
-                    {error.message} async
+                    {error.message}
                 </span>
             }
         </Form.Field>

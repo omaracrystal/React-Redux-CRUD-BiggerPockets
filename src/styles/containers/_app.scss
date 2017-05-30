@@ -1,19 +1,23 @@
+//app container
 .App {
   text-align: center;
-  padding: 0 15px 30px;
+  @include rem(padding, 0 15px 30px);
 }
 
 .App-header {
-  padding-top: 30px;
-  padding-bottom: 50px;
+  @include rem(padding, 30px 0 50px);
 }
 
+//listing card container
 .ui.cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: $mq-tablet;
+  margin: auto;
 }
 
+//listing form container
 .form-container {
 
   h1.form-header {
@@ -21,8 +25,8 @@
     font-size: $font-h1;
 
     @media (max-width: $mq-mobile) {
-      margin: 30px 0 20px;
-      font-size: 25px;
+      @include rem(margin, 30px 0 20px);
+      @include rem(font-size, $font-xlg);
     }
   }
 }

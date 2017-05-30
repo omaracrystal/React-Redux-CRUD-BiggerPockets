@@ -1,12 +1,12 @@
 .ui.two.item.menu {
   display: flex;
   box-shadow: $box-shadow-property-card;
-  margin: 0 -15px 30px;
+  @include rem(margin, 0 -15px 30px);
 
   .item {
     color: $primary-text-color;
     width: 50%;
-    padding: 15px;
+    @include rem(padding, 15px);
     @include button($site-background-color, $black);
 
     &.active {
