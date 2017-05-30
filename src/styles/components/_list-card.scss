@@ -16,12 +16,7 @@
   &:focus {
     box-shadow: $box-shadow-property-card-hover;
     @include rem(margin-top, 10px);
-
-    .fa {
-      visibility: visible;
-      @include text-link($primary-btn-color, $font-lg);
-      @include font-awesome-close-up($font-lg);
-    }
+    @include show-font-awesome();
   }
 
   .listing-item-name {
@@ -36,6 +31,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    &:focus {
+      @include show-font-awesome();
+    }
   }
 
   .fa {
@@ -48,25 +47,42 @@
       color: $primary-btn-color;
       visibility: visible;
     }
-  }
 
-  .font-awesome {
-    position: absolute;
-    @include rem(padding, 15px);
-
-    &.edit-listing {
-      top: 0px;
-      @include rem(right, 40px);
-    }
-
-    &.delete-listing {
-      top: 0px;
-      right: 0px;
+    &:focus {
+      @include show-font-awesome();
     }
   }
 
   @media (max-width: $mq-tablet) {
     width: 100%;
     @include rem(margin, 15px 0);
+  }
+}
+
+.font-awesome {
+  position: absolute;
+  @include rem(padding, 15px);
+
+  &.edit-listing {
+    top: 0px;
+    @include rem(right, 40px);
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &.delete-listing {
+    top: 0px;
+    right: 0px;
+  }
+
+  &:focus {
+
+    .fa {
+      visibility: visible !important;
+      @include text-link($primary-btn-color, $font-lg);
+      @include font-awesome-close-up($font-lg);
+    }
   }
 }

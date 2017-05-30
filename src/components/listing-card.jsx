@@ -8,7 +8,7 @@ import 'normalize.css';
 export default function ListingCard({listing, deleteListing}) {
 
   return (
-    <li className="App-listing-item-wrapper">
+    <li tabIndex="0" className="App-listing-item-wrapper parent">
 
         <h3 className="listing-item-name">
            {listing.title}
@@ -17,14 +17,15 @@ export default function ListingCard({listing, deleteListing}) {
         <a href={`${listing.url}`} target="_blank">
             <p className="listing-item-url">
             {listing.url}
-        </p></a>
+            </p>
+        </a>
 
         <Link className="font-awesome edit-listing"
               to={`/listings/edit/${listing._id}`}>
           <FontAwesome name='pencil' />
         </Link>
 
-        <button className="font-awesome delete-listing"
+        <button tabIndex="0" className="font-awesome delete-listing"
             onClick={() =>
             deleteListing(listing._id)} >
             <FontAwesome name='trash-o'/>

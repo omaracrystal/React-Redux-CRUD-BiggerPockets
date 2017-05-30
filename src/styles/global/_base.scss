@@ -31,6 +31,14 @@ a {
   * {
     @include text-link($primary-btn-color, $font-base);
   }
+
+  &:hover,
+  &:focus {
+    .fa {
+      visibility: visible !important;
+      color: $primary-btn-color !important;
+    }
+  }
 }
 
 b, strong {

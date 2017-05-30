@@ -107,6 +107,9 @@ a {
       color: #1b5dab; }
     a *:active, a *:visited {
       color: black; }
+  a:hover .fa, a:focus .fa {
+    visibility: visible !important;
+    color: #4A90E2 !important; }
 
 b, strong {
   font-weight: 600 !important; }
@@ -203,6 +206,49 @@ li {
 
 .error {
   color: #9f3a38; }
+
+.fa-spinner {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 25px;
+  /* 9 */
+  font-size: 2.5rem;
+  /* 9 */
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite; }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.message {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 22px;
+  /* 9 */
+  font-size: 2.2rem;
+  /* 9 */
+  color: #009688; }
+  .message.negative {
+    color: #9f3a38; }
 
 /* -------------------------- COMPONENTS -------------------------- */
 .ui.two.item.menu {
@@ -528,18 +574,32 @@ li {
     /* 9 */
     margin-top: 1rem;
     /* 9 */ }
-    .App-listing-item-wrapper:hover .fa, .App-listing-item-wrapper:focus .fa {
-      visibility: visible;
+    .App-listing-item-wrapper:hover.fa,
+    .App-listing-item-wrapper:hover .fa, .App-listing-item-wrapper:focus.fa,
+    .App-listing-item-wrapper:focus .fa {
+      visibility: visible !important;
       color: #4A90E2;
       cursor: pointer;
       font-size: 22px;
       text-decoration: none !important;
       transition: all 0.3s ease; }
-      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus {
+      .App-listing-item-wrapper:hover.fa:hover, .App-listing-item-wrapper:hover.fa:focus,
+      .App-listing-item-wrapper:hover .fa:hover,
+      .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus.fa:hover, .App-listing-item-wrapper:focus.fa:focus,
+      .App-listing-item-wrapper:focus .fa:hover,
+      .App-listing-item-wrapper:focus .fa:focus {
         color: #1b5dab; }
-      .App-listing-item-wrapper:hover .fa:active, .App-listing-item-wrapper:hover .fa:visited, .App-listing-item-wrapper:focus .fa:active, .App-listing-item-wrapper:focus .fa:visited {
+      .App-listing-item-wrapper:hover.fa:active, .App-listing-item-wrapper:hover.fa:visited,
+      .App-listing-item-wrapper:hover .fa:active,
+      .App-listing-item-wrapper:hover .fa:visited, .App-listing-item-wrapper:focus.fa:active, .App-listing-item-wrapper:focus.fa:visited,
+      .App-listing-item-wrapper:focus .fa:active,
+      .App-listing-item-wrapper:focus .fa:visited {
         color: black; }
-      .App-listing-item-wrapper:hover .fa:hover, .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus .fa:hover, .App-listing-item-wrapper:focus .fa:focus {
+      .App-listing-item-wrapper:hover.fa:hover, .App-listing-item-wrapper:hover.fa:focus,
+      .App-listing-item-wrapper:hover .fa:hover,
+      .App-listing-item-wrapper:hover .fa:focus, .App-listing-item-wrapper:focus.fa:hover, .App-listing-item-wrapper:focus.fa:focus,
+      .App-listing-item-wrapper:focus .fa:hover,
+      .App-listing-item-wrapper:focus .fa:focus {
         font-size: 25px; }
   .App-listing-item-wrapper .listing-item-name {
     /* 3 */
@@ -583,6 +643,26 @@ li {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+    .App-listing-item-wrapper .listing-item-url:focus.fa,
+    .App-listing-item-wrapper .listing-item-url:focus .fa {
+      visibility: visible !important;
+      color: #4A90E2;
+      cursor: pointer;
+      font-size: 22px;
+      text-decoration: none !important;
+      transition: all 0.3s ease; }
+      .App-listing-item-wrapper .listing-item-url:focus.fa:hover, .App-listing-item-wrapper .listing-item-url:focus.fa:focus,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:hover,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:focus {
+        color: #1b5dab; }
+      .App-listing-item-wrapper .listing-item-url:focus.fa:active, .App-listing-item-wrapper .listing-item-url:focus.fa:visited,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:active,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:visited {
+        color: black; }
+      .App-listing-item-wrapper .listing-item-url:focus.fa:hover, .App-listing-item-wrapper .listing-item-url:focus.fa:focus,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:hover,
+      .App-listing-item-wrapper .listing-item-url:focus .fa:focus {
+        font-size: 25px; }
   .App-listing-item-wrapper .fa {
     color: #ffffff;
     visibility: hidden; }
@@ -591,33 +671,26 @@ li {
         font-size: 22px;
         color: #4A90E2;
         visibility: visible; } }
-  .App-listing-item-wrapper .font-awesome {
-    position: absolute;
-    /* 3 */
-    /* 3 */
-    /* 4 */
-    /* 6 */
-    /* 6 */
-    /* 7 */
-    padding: 15px;
-    /* 9 */
-    padding: 1.5rem;
-    /* 9 */ }
-    .App-listing-item-wrapper .font-awesome.edit-listing {
-      top: 0px;
-      /* 3 */
-      /* 3 */
-      /* 4 */
-      /* 6 */
-      /* 6 */
-      /* 7 */
-      right: 40px;
-      /* 9 */
-      right: 4rem;
-      /* 9 */ }
-    .App-listing-item-wrapper .font-awesome.delete-listing {
-      top: 0px;
-      right: 0px; }
+    .App-listing-item-wrapper .fa:focus.fa,
+    .App-listing-item-wrapper .fa:focus .fa {
+      visibility: visible !important;
+      color: #4A90E2;
+      cursor: pointer;
+      font-size: 22px;
+      text-decoration: none !important;
+      transition: all 0.3s ease; }
+      .App-listing-item-wrapper .fa:focus.fa:hover, .App-listing-item-wrapper .fa:focus.fa:focus,
+      .App-listing-item-wrapper .fa:focus .fa:hover,
+      .App-listing-item-wrapper .fa:focus .fa:focus {
+        color: #1b5dab; }
+      .App-listing-item-wrapper .fa:focus.fa:active, .App-listing-item-wrapper .fa:focus.fa:visited,
+      .App-listing-item-wrapper .fa:focus .fa:active,
+      .App-listing-item-wrapper .fa:focus .fa:visited {
+        color: black; }
+      .App-listing-item-wrapper .fa:focus.fa:hover, .App-listing-item-wrapper .fa:focus.fa:focus,
+      .App-listing-item-wrapper .fa:focus .fa:hover,
+      .App-listing-item-wrapper .fa:focus .fa:focus {
+        font-size: 25px; }
   @media (max-width: 760px) {
     .App-listing-item-wrapper {
       width: 100%;
@@ -633,6 +706,49 @@ li {
       /* 9 */
       margin: 1.5rem 0;
       /* 9 */ } }
+
+.font-awesome {
+  position: absolute;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding: 15px;
+  /* 9 */
+  padding: 1.5rem;
+  /* 9 */ }
+  .font-awesome.edit-listing {
+    top: 0px;
+    /* 3 */
+    /* 3 */
+    /* 4 */
+    /* 6 */
+    /* 6 */
+    /* 7 */
+    right: 40px;
+    /* 9 */
+    right: 4rem;
+    /* 9 */ }
+    .font-awesome.edit-listing:focus {
+      outline: 0; }
+  .font-awesome.delete-listing {
+    top: 0px;
+    right: 0px; }
+  .font-awesome:focus .fa {
+    visibility: visible !important;
+    color: #4A90E2;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: none !important;
+    transition: all 0.3s ease; }
+    .font-awesome:focus .fa:hover, .font-awesome:focus .fa:focus {
+      color: #1b5dab; }
+    .font-awesome:focus .fa:active, .font-awesome:focus .fa:visited {
+      color: black; }
+    .font-awesome:focus .fa:hover, .font-awesome:focus .fa:focus {
+      font-size: 25px; }
 
 /* -------------------------- CONTAINERS -------------------------- */
 .App {

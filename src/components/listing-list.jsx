@@ -2,12 +2,13 @@ import React from 'react';
 import { Card, Message, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ListingCard from './listing-card';
+import FontAwesome from 'react-fontawesome';
 
 export default function ListingList({listings, loading, errors, deleteListing}){
 
   const loadingMessage = (
       <Message icon info>
-        <Icon name='circle notched' loading />
+        <FontAwesome name='spinner' />
         <Message.Content>
            <Message.Header>Just one second</Message.Header>
            We are fetching that content for you.

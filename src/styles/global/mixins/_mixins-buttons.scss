@@ -44,3 +44,13 @@
     font-size: $font-size+3px;
   }
 }
+
+@mixin show-font-awesome () {
+
+  &.fa,
+  .fa {
+    visibility: visible !important;
+    @include text-link($primary-btn-color, $font-lg);
+    @include font-awesome-close-up($font-lg);
+  }
+}
