@@ -1,7 +1,15 @@
+.nav-placeholder {
+  @include rem(height, 100px);
+}
+
 .ui.two.item.menu {
   display: flex;
   box-shadow: $box-shadow-property-card;
-  @include rem(margin, 0 -15px 30px);
+  @include rem(margin, 0 -15px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 
   .item {
     color: $primary-text-color;

@@ -250,7 +250,75 @@ li {
   .message.negative {
     color: #9f3a38; }
 
+.modal {
+  position: fixed;
+  background: white;
+  padding: 50px;
+  border-radius: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 45px 0px rgba(0, 0, 0, 0.5); }
+
+.primary-button {
+  color: #ffffff !important;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+  font-weight: 400 !important;
+  background: #4A90E2;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding: 15px 30px;
+  /* 9 */
+  padding: 1.5rem 3rem;
+  /* 9 */ }
+  .primary-button:hover, .primary-button:focus {
+    color: #ffffff;
+    background: #2171ce; }
+  .primary-button:active {
+    color: #ffffff;
+    background: #185195; }
+  .primary-button.disabled {
+    cursor: not-allowed; }
+
 /* -------------------------- COMPONENTS -------------------------- */
+.ui.message {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  margin-top: 50px;
+  /* 9 */
+  margin-top: 5rem;
+  /* 9 */ }
+
+.nav-placeholder {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  height: 100px;
+  /* 9 */
+  height: 10rem;
+  /* 9 */ }
+
 .ui.two.item.menu {
   display: flex;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
@@ -262,14 +330,14 @@ li {
   /* 6 */
   /* 6 */
   /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  margin: 0 -15px 30px;
+  margin: 0 -15px;
   /* 9 */
-  margin: 0 -1.5rem 3rem;
-  /* 9 */ }
+  margin: 0 -1.5rem;
+  /* 9 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; }
   .ui.two.item.menu .item {
     color: #3c3939;
     width: 50%;
@@ -309,6 +377,51 @@ li {
     .ui.two.item.menu .item:first-child {
       border-right: 1px solid #d3d3d3; }
 
+h1.form-header {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 5 */
+  /* 4 */
+  /* 5 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  margin: 0 auto 50px;
+  /* 9 */
+  margin: 0 auto 5rem;
+  /* 9 */
+  font-size: 48px; }
+  @media (max-width: 460px) {
+    h1.form-header {
+      /* 3 */
+      /* 3 */
+      /* 4 */
+      /* 6 */
+      /* 6 */
+      /* 7 */
+      /* 4 */
+      /* 5 */
+      /* 4 */
+      /* 6 */
+      /* 6 */
+      /* 7 */
+      margin: 30px 0 20px;
+      /* 9 */
+      margin: 3rem 0 2rem;
+      /* 9 */
+      /* 3 */
+      /* 3 */
+      /* 4 */
+      /* 6 */
+      /* 6 */
+      /* 7 */
+      font-size: 25px;
+      /* 9 */
+      font-size: 2.5rem;
+      /* 9 */ } }
+
 .App-form {
   position: relative;
   max-width: 760px;
@@ -321,12 +434,13 @@ li {
   /* 6 */
   /* 6 */
   /* 7 */
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   /* 9 */
-  padding-bottom: 5rem;
+  margin-bottom: 5rem;
   /* 9 */ }
   .App-form .cancel-edit {
     position: absolute;
+    background: #ffffff;
     z-index: 10;
     /* 3 */
     /* 3 */
@@ -353,11 +467,37 @@ li {
     /* 9 */
     padding: 1.2rem 2.5rem;
     /* 9 */
-    border-left: 1px solid; }
+    border-left: 1px solid;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease; }
+    .App-form .cancel-edit:hover, .App-form .cancel-edit:focus {
+      background: #b86968;
+      color: #ffffff; }
+    @media (max-width: 760px) {
+      .App-form .cancel-edit {
+        position: relative;
+        background: #F1F1F1;
+        width: 100%;
+        right: 0;
+        border: 1px solid #d3d3d3;
+        border-radius: 0;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+        /* 3 */
+        /* 3 */
+        /* 4 */
+        /* 6 */
+        /* 6 */
+        /* 7 */
+        margin-top: -2px;
+        /* 9 */
+        margin-top: -0.2rem;
+        /* 9 */ } }
   .App-form .field label {
     position: absolute;
-    visibility: hidden; }
+    visibility: hidden;
+    z-index: 10; }
   .App-form .field input {
+    position: relative;
     width: 100%;
     /* 3 */
     /* 3 */
@@ -391,10 +531,6 @@ li {
     .App-form .field:nth-child(2) input {
       border-radius: 0 5px 5px 0; }
   .App-form .form-button-save {
-    border-radius: 5px;
-    border: 0;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-    font-weight: 400 !important;
     /* 3 */
     /* 3 */
     /* 4 */
@@ -425,23 +561,8 @@ li {
     /* 9 */
     padding: 1.5rem;
     /* 9 */
-    width: 100px;
-    background: #4A90E2;
-    color: #ffffff;
-    background: #4A90E2;
-    border: 0;
-    cursor: pointer;
-    text-decoration: none !important;
-    transition: all 0.3s ease; }
-    .App-form .form-button-save:hover, .App-form .form-button-save:focus {
-      color: #ffffff;
-      background: #2171ce; }
-    .App-form .form-button-save:active {
-      color: #ffffff;
-      background: #185195; }
-    .App-form .form-button-save.disabled {
-      cursor: not-allowed; }
-  @media (max-width: 460px) {
+    width: 100px; }
+  @media (max-width: 760px) {
     .App-form {
       padding-bottom: 0;
       display: flex;
@@ -825,34 +946,17 @@ li {
   max-width: 760px;
   margin: auto; }
 
-.form-container h1.form-header {
-  margin: 50px;
-  font-size: 48px; }
-  @media (max-width: 460px) {
-    .form-container h1.form-header {
-      /* 3 */
-      /* 3 */
-      /* 4 */
-      /* 6 */
-      /* 6 */
-      /* 7 */
-      /* 4 */
-      /* 5 */
-      /* 4 */
-      /* 6 */
-      /* 6 */
-      /* 7 */
-      margin: 30px 0 20px;
-      /* 9 */
-      margin: 3rem 0 2rem;
-      /* 9 */
-      /* 3 */
-      /* 3 */
-      /* 4 */
-      /* 6 */
-      /* 6 */
-      /* 7 */
-      font-size: 25px;
-      /* 9 */
-      font-size: 2.5rem;
-      /* 9 */ } }
+.form-container.form-edit input:nth-child(2) {
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding-right: 100px;
+  /* 9 */
+  padding-right: 10rem;
+  /* 9 */ }
+  @media (max-width: 760px) {
+    .form-container.form-edit input:nth-child(2) {
+      padding-right: 15px; } }

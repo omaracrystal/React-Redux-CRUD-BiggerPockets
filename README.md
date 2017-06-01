@@ -1,13 +1,38 @@
-# REDUX CRUD EXAMPLE
+# REDUX CRUD EXAMPLE FOR LISTINGS 
 
-## Introduction
+## Description:
 This a basic crud react-redux-featherjs application for managing listings. It currently uses Mongodb for the database and FeathersJS for the REST API server.
+
+## Technologies:
+- React
+- Redux
+- JavaScript
+- HTML5
+- Sass
+- MongoDB
+- Node
+- Feathers
+- Gulp & Browserify
+
+**Main Page**                       |    |**Form Validation**
+:----------------------------------:|:--:|:----------------------------------:
+![](/public/images/desktop.png)      |    | ![](/public/images/formvalidation.png)
+
+**Listing Card**                    |    |**Edit/Update**
+:----------------------------------:|:--:|:----------------------------------:
+![](/public/images/cards.png)    |    | ![](/public/images/edit.png)
+
+**Mobile**                          |    |  **Tablet**
+:----------------------------------:|:--:|:----------------------------------:
+![](/public/images/mobile.png)        |    | ![](/public/images/tablet.png)
+
+
 
 ##  How to install
 
 ```bash
-git clone https://github.com/omaracrystal/React-CRUD-Listings.git
-cd react-listing-manager
+git clone https://github.com/omaracrystal/React-Redux-CRUD-BiggerPockets.git
+cd React-Redux-CRUD-BiggerPockets
 
 # Install frontend dependencies
 npm install
@@ -25,7 +50,7 @@ Ensure you have mongodb installed in your system and that it is running
 Start the backend server first:
 
 ```bash
-cd react-listing-manager/backend
+cd React-Redux-CRUD-BiggerPockets/backend
 npm start
 ```
 This will run the backend server at localhost:3030. If all is working well, you should be able to access the url http://localhost:3030/listings from your Browser or Postman
@@ -34,7 +59,7 @@ This will run the backend server at localhost:3030. If all is working well, you 
 Open a separate terminal to start the client:
 
 ```bash
-cd react-listing-manager
+cd React-Redux-CRUD-BiggerPockets
 npm start
 ```
 

@@ -25,3 +25,28 @@
     color: $error-color;
   }
 }
+
+.modal {
+  position: fixed;
+  background: white;
+  padding: 50px;
+  border-radius: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 45px 0px rgba(0, 0, 0, 0.5);
+}
+
+.primary-button {
+  color: $white !important;
+  border-radius: $border-radius;
+  border: 0;
+  box-shadow: $box-shadow-property-card;
+  font-weight: $font-weight-normal;
+  @include button($primary-btn-color, $white);
+  @include rem(padding, 15px 30px);
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}

@@ -12,6 +12,8 @@ class App extends Component {
 
             <Container className="App">
 
+                <div className="nav-placeholder"></div>
+
                 <div className="ui two item menu">
 
                     <NavLink

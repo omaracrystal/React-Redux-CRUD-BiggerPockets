@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { newListing, saveListing, fetchListing, updateListing } from '../actions/listing-actions';
 import ListingForm from '../components/listing-form';
 
-
 class ListingFormPage extends Component {
 
   state = {

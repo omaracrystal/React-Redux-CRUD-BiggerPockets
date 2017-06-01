@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
+import $ from 'jquery';
 
 import '../styles/main.css';
 import 'normalize.css';
@@ -26,11 +27,18 @@ export default function ListingCard({listing, deleteListing}) {
         </Link>
 
         <button tabIndex="0" className="font-awesome delete-listing"
-            onClick={() =>
-            deleteListing(listing._id)} >
+            onClick={() => {
+
+                deleteListing(listing._id);
+
+                $('.delete-confirmation').removeClass('hide');
+
+                setTimeout(function(){
+                    $('.delete-confirmation').addClass('hide');
+                }, 1000);
+            }} >
             <FontAwesome name='trash-o'/>
         </button>
-
     </li>
   )
 }

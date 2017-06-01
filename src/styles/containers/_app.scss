@@ -20,13 +20,15 @@
 //listing form container
 .form-container {
 
-  h1.form-header {
-    margin: 50px;
-    font-size: $font-h1;
+  &.form-edit {
+    input {
+      &:nth-child(2) {
+        @include rem(padding-right, 100px);
 
-    @media (max-width: $mq-mobile) {
-      @include rem(margin, 30px 0 20px);
-      @include rem(font-size, $font-xlg);
+        @media (max-width: $mq-tablet) {
+          padding-right: 15px;
+        }
+      }
     }
   }
 }

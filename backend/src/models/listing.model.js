@@ -1,4 +1,5 @@
-//require('mongoose-type-email');
+//require('mongoose-type-url');
+//type: mongooseClient.SchemaTypes.Url,
 
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
@@ -8,7 +9,6 @@ module.exports = function (app) {
       required: [true, 'Please give your url a Name']
     },
     url: {
-      //type: mongooseClient.SchemaTypes.Email,
       type: String,
       required: [true, 'Url link is required']
     },

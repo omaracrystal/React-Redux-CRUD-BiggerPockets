@@ -3,6 +3,7 @@ import { Card, Message, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ListingCard from './listing-card';
 import FontAwesome from 'react-fontawesome';
+import $ from 'jquery';
 
 export default function ListingList({listings, loading, errors, deleteListing}){
 
@@ -24,7 +25,9 @@ export default function ListingList({listings, loading, errors, deleteListing}){
                No Listings Found
            </Message.Header>
            <p>Add some new listings to get started.</p>
-           <Link to={'/listings/new'} className="ui button primary">
+           <Link to={'/listings/new'}
+                 className="primary-button"
+                 onClick={() => {$('input').focus();}}>
                Add New Listing
            </Link>
        </Message.Content>
@@ -61,6 +64,9 @@ export default function ListingList({listings, loading, errors, deleteListing}){
       { listings.length === 0 && !loading  && !errors.global && emptyMessage }
       { errors.global && timeoutMessage }
       { listings.length > 0 && listingList }
+        <div className="modal delete-confirmation hide">
+            Successfully deleted!
+        </div>
     </div>
   )
 }
