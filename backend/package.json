@@ -17,8 +17,8 @@
     "lib": "src"
   },
   "engines": {
-    "node": ">= 6.0.0",
-    "yarn": ">= 0.18.0"
+    "node": "6.10.3",
+    "yarn": "0.24.6"
   },
   "scripts": {
     "test": "npm run eslint && npm run mocha",
